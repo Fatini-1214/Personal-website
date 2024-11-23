@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Personal Website</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="mystyles.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004F2D;
+            color: #D87CAC;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #D87CAC;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+			color: #091E05;
+			
+        }
+	
+        #main-frame {
+		width: 100%;
+		height: calc(100vh - 100px); /* Adjust height based on header and footer */
+		border: none;
+		overflow: auto; /* Allow scrolling if content overflows */
+		display: block;
+		}
+
+
+        footer {
+            background-color: #004F2D;
+            color: #D87CAC;
+            text-align: center;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .social-media{
+            margin-top: 5px;
+        }
+
+        .social-media a {
+            color: #D87CAC;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+</style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+            <h1>My Personal Website</h1>
+            <nav>
+                
+                    <a href="home.html" target="content-frame">Home</a>
+					<a href="biodata.html" target="content-frame">Bio</a>
+					<a href="edu.html" target="content-frame">Education</a>
+					<a href="gallery.html" target="content-frame">Gallery</a>
+					<a href="family.html" target="content-frame">Family</a>
+					<a href="experience.html" target="content-frame">Experience</a>
+					
+            </nav>
+    </header>
+	
+	  <iframe id="main-frame" name="content-frame" src="home.html"></iframe>
+
+
+    <!-- Footer Section -->
+    <footer>
+            &copy; 2024  Nurfatini Ja'afar. All rights reserved.
+			<div class="social-media">
+			<a href="https://www.instagram.com/ddsydrlw" target="_blank">
+			<i class="fa-brands fa-instagram"></i></a>
+			
+			<a href="mailto:n.fatini190@gmail.com">
+			<i class="fa-regular fa-envelope"></i></a>
+
+			<a href="https://open.spotify.com/user/n5j9gnr09lgr42j5384k6wyjw?si=gP2Mv7B_QLGG4JE4w2yXXg" target="_blank">
+			<i class="fab fa-spotify"></i></a>
+		
+			<a href="https://www.tiktok.com/@urimposter_?_t=8ra14Sxqgop&_r=1" target="_blank">
+			<i class="fa-brands fa-tiktok"></i></a>
+			</div>
+			<section class="last-updated">
+				<p>Last Updated: <span id="lastUpdated"></span></p>
+			</section>
+			<script>
+				const lastModified = document.lastModified;
+				document.getElementById('lastUpdated').textContent = lastModified;
+			</script>
+
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Blog: A Day in Penang</title>
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #091E05;
+        line-height: 1.6;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Blog Section */
+    .blog-content {
+        flex: 2;
+        background-color: #A3BBAD;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-content h2 {
+        font-size: 22px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .blog-content p {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .blog-content img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Picture Section */
+    .gallery {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        background: #BC8DA0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+	
+	/* Video Section */
+	.video-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #A3BBAD;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto; 
+	}
+
+	.video-card {
+		background-color: #ffffff;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.video-container video {
+		max-width: 800px;
+		max-height: 450px;
+		margin: 0 auto;
+		border-radius: 8px;
+		display: block;
+	}
+
+	#replayButton {
+		padding: 10px 20px;
+		background-color: #004F2D;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	#replayButton:hover {
+		background-color: #BC8DA0;
+	}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Blog Section -->
+        <section class="blog-content">
+            <h2>Sharing My Trip to Penang</h2>
+            <p>Hey everyone! I had <strong>an amazing trip to Penang</strong> with my friends, and I wanted to share some highlights with you all.</p>
+            <img src="ferry.jpg" alt="Penang Old Ferry">
+            <p>
+                In the morning, we headed to Penang Sentral to catch the ferry to the island. We took a public bus for transportation for the day. 
+                We spent our time exploring George Town, with our first stop being the Gurney Paragon Mall. 
+                We visited the Book Xcess on level 8, a great spot for any bookworm!
+            </p>
+			<p>
+				Our next destination was the Gurney Plaza Mall, where we enjoyed a delicious lunch at Port Pasta. Afterward, we explored the mall, taking our time to visit its various shops and attractions before heading to our next stop.
+				We then made our way to Penang Street Art, a vibrant and Insta-worthy spot filled with creative murals. 
+				We couldn’t resist capturing countless photos and videos to remember the moment. Nearby, we also visited the Bomba Street Art, which was equally fascinating and brimming with charm.
+			</p>
+			<p>
+				Before returning to the ferry station, we stopped by a cozy restaurant called Color Port. It was the perfect place to unwind, enjoy the relaxing atmosphere, and take in the beautiful scenery of Penang. 
+				Overall, it was a wonderful experience traveling around Penang using public transportation. 
+				It allowed us to connect with the city in a unique way. I hope to create more memories like this with my friends in the future.
+				That’s all from me for now—until next time, bye!
+			</p>
+			
+        </section>
+
+        <!-- Picture Section -->
+        <section class="gallery">
+            <img src="pb1.jpg" alt="Penang Street Art">
+            <img src="pb2.jpg" alt="Penang Food">
+            <img src="pb3.jpg" alt="Beach View">
+			<img src="pb4.jpg" alt="Beach View">
+        </section> 
+
+			<!-- Video Section -->
+		<section class="video-section">
+		<h2>Watch the Vlog</h2>
+		<div class="video-container">
+			<video id="myVideo" controls playsinline poster="vlog.png">
+				<source src="penang.MOV" type="video/mp4">
+			</video>
+			 <button id="replayButton" style="display: none;">Replay</button>
+
+		<script>
+			const video = document.getElementById('myVideo');
+			const replayButton = document.getElementById('replayButton');
+
+			// Show replay button when the video ends
+			video.addEventListener('ended', () => {
+				replayButton.style.display = 'block';
+			});
+
+			// Replay the video when the button is clicked
+			replayButton.addEventListener('click', () => {
+				video.currentTime = 0; // Restart the video
+				video.play();          // Play the video
+				replayButton.style.display = 'none'; // Hide the button
+			});
+		</script>
+			</div>
+		</section>
+		
+	</div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Blog</title>
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background-color: #091E05;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Story Section */
+    .story {
+        background: #A3BBAD;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .story h2 {
+        color: #004F2D;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .story p {
+        font-size: 16px;
+        color: #fff;
+    }
+
+	/* Card Display Styles */
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 20px;
+	}
+
+	.card {
+		background-color: #A3BBAD;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		text-align: center;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.card img {
+		width: 100%;
+		height: auto;
+		border-bottom: 3px solid #004F2D;
+	}
+
+	.card p {
+		margin: 10px 0;
+		font-size: 16px;
+		color: #004F2D;
+	}
+
+	.card:hover {
+		transform: scale(1.05);
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	}
+	 
+
+	
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Story Section -->
+        <section class="story">
+            <h2>About My Family | Meet the Ja'afar's family</h2>
+            <p>
+                Family is the foundation of my life and my greatest source of strength and support. Each member, from the oldest to the youngest, brings their own unique personality and interests, 
+				creating a bond that makes our family truly special. We are a family of seven—my parents, three brothers, one sister, and me. 
+				As the second youngest, I cherish my role in this dynamic and loving group. I hold equal love for each of them, and I am grateful for the moments we share.
+			</p>
+			<p>
+				Beyond my immediate family, I am fortunate to have a large extended family on both my mother’s and father’s sides, adding even more love, laughter, and cherished memories to my life.
+            </p>
+        </section>
+
+        <!-- Gallery Section  -->
+		<section class="gallery">
+			<div class="card">
+				<img src="family1.jpg" alt="Family Picture">
+				<p>Family</p>
+			</div>
+			<div class="card">
+				<img src="family2.jpg" alt="Big Family Picture">
+				<p>Aidilfitri Eid</p>
+			</div>
+		</section>
+
+    </div>
+</body>
+</html>

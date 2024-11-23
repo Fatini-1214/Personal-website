@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mystyles.css">
+<title>Biodata</title>
+<style>
+	/* profile */
+        .profile {
+            background-color: #BC8DA0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            max-width: 250px;
+            border-radius: 10%;
+            margin-right: 20px;
+        }
+		
+        .profile .text {
+            flex: 1;
+        }
+        .profile h2 {
+            margin: 0;
+            color: #fff;
+		}
+		.profile p {
+			font-size: 20px;
+			margin: 0;
+		}
+		
+	/* Biodata */
+		 .sections {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .biodata, .skills {
+            background-color: #A3BBAD;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+			
+        }
+		.biodata h3, skills h3 {
+            margin: 0;
+		}
+        .biodata ul, .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+         .biodata ul li, .skills ul li {
+            margin-bottom: 10px;
+			font-size: 20px;
+		}
+		
+		
+	/* Hobbies Section */
+		.hobbies-section {
+			margin-top: 30px;
+			padding: 15px;
+			background-color: #A3BBAD;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		.hobbies-section h2 {
+			margin-bottom: 10px;
+		}
+
+		.hobbies-section p {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+
+		.hobby-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-top: 20px;
+		}
+
+		.hobby-card {
+			background-color: #fff;
+			padding: 15px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.hobby-card img {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.hobby-card h3 {
+			margin-top: 10px;
+			font-size: 18px;
+			color: #004F2D;
+		}
+
+		.hobby-card p {
+			font-size: 16px;
+			color: #555;
+			margin-top: 10px;
+		}
+
+	/* Food Section */
+		.interests-section {
+			margin-top: 30px;
+			padding: 15px;
+			background-color: #BC8DA0;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		.interests-section h2 {
+			margin-bottom: 10px;
+		}
+
+		.interests-section p {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+
+		.food-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-top: 20px;
+		}
+
+		.food-card {
+			background-color: #ffffff;
+			padding: 15px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.food-card img {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.food-card h3 {
+			margin-top: 10px;
+			font-size: 18px;
+			color: #004F2D;
+		}
+
+	/* Interest in Music Section */
+		.interests-section-music {
+			margin-top: 30px;
+			padding: 15px;
+			background-color: #A3BBAD;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		.interests-section-music h2 {
+			margin-bottom: 10px;
+		}
+
+		.interests-section-music p {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+
+		/* Artist styling */
+		.artist-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-top: 20px;
+		}
+
+		.artist-card {
+			background-color: #ffffff;
+			padding: 15px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.artist-card img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.artist-card h3 {
+			margin-bottom: 10px;
+			font-size: 18px;
+			color: #004F2D;
+		}
+
+		.artist-card audio {
+			width: 100%;
+		}
+		
+	/* Interest in Movies Section */
+		.interests-section-movies {
+			margin-top: 30px;
+			padding: 15px;
+			background-color: #BC8DA0;
+			border-radius: 10px;
+			text-align: center;
+		}
+
+		.interests-section-movies h2 {
+			margin-bottom: 10px;
+		}
+
+		.interests-section-movies p {
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+
+		.movie-genres {
+			list-style-type: none;
+			padding: 0;
+			margin: 0 0 20px;
+		}
+
+		.movie-genres li {
+			display: inline-block;
+			margin: 5px 10px;
+			background-color: #ffffff;
+			padding: 8px 15px;
+			border-radius: 20px;
+			font-size: 18px;
+			color: #004F2D;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		}
+		
+		.movie-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-top: 20px;
+		}
+		.movie-card {
+			background-color: #ffffff;
+			padding: 15px;
+			border-radius: 10px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			color: #555;
+		}
+
+		.movie-card img {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.movie-card h3 {
+			margin-top: 10px;
+			font-size: 18px;
+			color: #004F2D;
+		}
+
+    
+
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Profile section-->
+		 <div class="profile">
+            <img src="potrait.jpg" alt="Profile Picture">
+			
+            <div class="text">
+                <h2>Nurfatini Ja'afar</h2>
+                <p>
+					Hi! I'm Fatini, a 20-year-old with a passion for exploring life's endless possibilities. My motto is simple: embrace every opportunity to try something new. 
+					I find joy in discovering hobbies that not only spark my interest but also stay with me for the long run.
+				</p>
+            </div>
+        </div>
+		
+		<!-- Biodata Sections -->
+        <div class="sections">
+            <div class="biodata">
+                <h2>Personal Information</h2>
+                <ul>
+                    <li><strong>Name:</strong> Nurfatini binti Ja'afar</li>
+                    <li><strong>Date of Birth:</strong> June 1, 2004</li>
+                    <li><strong>Nationality:</strong> Malaysian</li>
+                    <li><strong>Languages:</strong> Malay, English</li>
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Cataloging</li>
+                    <li>Electronic publishing</li>
+                    <li>MySQL & Microsoft Access</li>
+					<li>
+                </ul>
+            </div>	
+			
+		</div>
+	
+		<!-- Hobbies Section -->
+		<div class="hobbies-section">
+			<h2>Hobbies</h2>
+			<p>Here are some of my hobbies that I enjoy in my free time:</p>
+			<div class="hobby-grid">
+				<!-- Hobby 1 -->
+				<div class="hobby-card">
+					<img src="hobi.jpg" alt="Crochet">
+					<h3>Crochet</h3>
+					<p>Crochet gives me peace and helps me escape the busy world. I've been crocheting for almost a year, and it's fun!</p>
+				</div>
+
+				<!-- Hobby 2 -->
+				<div class="hobby-card">
+					<img src="hobi3.jpg" alt="Photography">
+					<h3>Photography</h3>
+					<p>I love capturing moments and creating memories. Feel free to check out my <a href="gallery.html">gallery</a>.</p>
+				</div>
+
+				<!-- Hobby 3 -->
+				<div class="hobby-card">
+					<img src="hobi2.jpg" alt="Reading Novels">
+					<h3>Reading Novels</h3>
+					<p>Getting lost in a good book is my favorite way to relax and learn about new worlds.</p>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Interests Section -->
+		<div class="interests-section">
+			<h2>Interest in Food</h2>
+			<p>I love trying various foods and drinks. Here are some of my favorites:</p>
+			<div class="food-grid">
+				<!-- Food Item 1 -->
+				<div class="food-card">
+					<img src="fav.jpg" alt="Tteokbokki">
+					<h3>Tteokbokki</h3>
+				</div>
+
+				<!-- Food Item 2 -->
+				<div class="food-card">
+					<img src="drink.jpg" alt="Milk Tea & Matcha">
+					<h3>Milk Tea & Matcha</h3>
+				</div>
+
+				<!-- Food Item 3 -->
+				<div class="food-card">
+					<img src="cake.jpg" alt="Red Velvet Cake">
+					<h3>Red Velvet Cake</h3>
+				</div>
+			</div>
+		</div>
+
+		<!--interest music-->
+		<div class="interests-section-music">
+		<h2>Interest in Music</h2>
+		<p>I mostly listen to K-Pop and R&B genres. Here are some of my favorite artists:</p>
+		<div class="artist-grid">
+			<!-- Artist 1 -->
+			<div class="artist-card">
+				<img src="ar1.jpg" alt="TXT">
+				<h3>TXT</h3>
+				<audio controls>
+					<source src="Anti-Romantic.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+
+			<!-- Artist 2 -->
+			<div class="artist-card">
+				<img src="ar2.jpg" alt="Aespa">
+				<h3>Aespa</h3>
+				<audio controls>
+					<source src="Supernova.flac" type="audio/mpeg">
+				</audio>
+			</div>
+
+			<!-- Artist 3 -->
+			<div class="artist-card">
+				<img src="ar3.jpg" alt="Bibi">
+				<h3>Bibi</h3>
+				<audio controls>
+					<source src="bibi.mp3" type="audio/mpeg">
+				</audio>
+					</div>
+				</div>
+		</div>
+		<!-- Interest in Movies Section -->
+		<div class="interests-section-movies">
+			<h2>Interest in Movies</h2>
+			<p>I enjoy a variety of movie genres. Here are some of my favorites:</p>
+			<!-- List of Genres -->
+			<ul class="movie-genres">
+				<li>Action</li>
+				<li>Romance</li>
+				<li>Thriller</li>
+				<li>Fantasy Fiction</li>
+				<li>Comedy</li>
+			</ul>
+			<div class="movie-grid">
+			<div class="movie-card">
+					<img src="mov1.jpg" alt="Tteokbokki">
+					<h3>Ratatouille</h3>
+					<p>Animated comedy drama film</p>
+				</div>
+				
+			<div class="movie-card">
+					<img src="mov2.jpg" alt="Tteokbokki">
+					<h3>Mean Girls</h3>
+					<p>Comedy teen film</p>
+				</div>
+				
+			<div class="movie-card">
+					<img src="mov3.jpg" alt="Tteokbokki">
+					<h3>Spirited Away</h3>
+					<p>Japanese animated fantasy film</p>
+				</div>
+				
+			<div class="movie-card">
+					<img src="mov4.jpg" alt="Tteokbokki">
+					<h3>Alice in The Wonderland</h3>
+					<p>Fantasy adventure fiction film</p>
+				</div>				
+				
+			</div>
+
+			</div>
+
+</div>    
+</body>
