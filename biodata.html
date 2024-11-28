@@ -14,12 +14,15 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
-        .profile img {
-            max-width: 250px;
-            border-radius: 10%;
-            margin-right: 20px;
-        }
 		
+		.profile img {
+		width: 250px; 
+		height: auto;
+		border-radius: 10%; 
+		cursor: pointer;
+		margin-right: 20px;
+		}
+
         .profile .text {
             flex: 1;
         }
@@ -199,8 +202,11 @@
 			border-radius: 50%;
 			object-fit: cover;
 			margin-bottom: 10px;
+			cursor: pointer;
 		}
-
+		.artist-card map area {
+		outline: none; 
+	}
 		.artist-card h3 {
 			margin-bottom: 10px;
 			font-size: 18px;
@@ -267,8 +273,13 @@
 			border-radius: 10px;
 			object-fit: cover;
 			margin-bottom: 10px;
+			cursor: pointer;
 		}
-
+		
+		.movie-card map area {
+			outline: none; 
+		}
+		
 		.movie-card h3 {
 			margin-top: 10px;
 			font-size: 18px;
@@ -283,15 +294,16 @@
 <body>
 	<div class="container">
 		<!-- Profile section-->
-		 <div class="profile">
+			<div class="profile">
+			<a href="potrait.jpg" target="_blank">
             <img src="potrait.jpg" alt="Profile Picture">
-			
+			</a>
             <div class="text">
                 <h2>Nurfatini Ja'afar</h2>
                 <p>
-					Hi! I'm Fatini, a 20-year-old with a passion for exploring life's endless possibilities. My motto is simple: embrace every opportunity to try something new. 
-					I find joy in discovering hobbies that not only spark my interest but also stay with me for the long run.
-				</p>
+			Hi! I'm Fatini, a 20-year-old with a passion for exploring life's endless possibilities. My motto is simple: embrace every opportunity to try something new. 
+			I find joy in discovering hobbies that not only spark my interest but also stay with me for the long run.
+		</p>
             </div>
         </div>
 		
@@ -379,34 +391,45 @@
 		<div class="interests-section-music">
 		<h2>Interest in Music</h2>
 		<p>I mostly listen to K-Pop and R&B genres. Here are some of my favorite artists:</p>
-		<div class="artist-grid">
+			<div class="artist-grid">
 			<!-- Artist 1 -->
 			<div class="artist-card">
-				<img src="ar1.jpg" alt="TXT">
+				
+				<img src="ar1.jpg" alt="TXT" usemap="#txt-map">
 				<h3>TXT</h3>
 				<audio controls>
 					<source src="Anti-Romantic.mp3" type="audio/mpeg">
 				</audio>
+				
+				<map name="txt-map">
+					<area target="_blank"  title="TXT Profile" href="https://kprofiles.com/txt-members-profile/" coords="0,0,100,100" shape="circle">
+				</map>
 			</div>
 
 			<!-- Artist 2 -->
 			<div class="artist-card">
-				<img src="ar2.jpg" alt="Aespa">
+				<img src="ar2.jpg" alt="Aespa" usemap="#aespa-map">
 				<h3>Aespa</h3>
 				<audio controls>
 					<source src="whiplash.mp3" type="audio/mpeg">
 				</audio>
+				<map name="aespa-map">
+				<area target="_blank"  title="Aespa Profile" href="https://kprofiles.com/aespa-members-profile/" coords="0,0,100,100" shape="circle">
+				</map>
 			</div>
 
 			<!-- Artist 3 -->
 			<div class="artist-card">
-				<img src="ar3.jpg" alt="Bibi">
+				<img src="ar3.jpg" alt="Bibi" usemap="#bibi-map">
 				<h3>Bibi</h3>
 				<audio controls>
 					<source src="bibi.mp3" type="audio/mpeg">
 				</audio>
+				 <map name="bibi-map">
+				<area target="_blank" title="Bibi Profile" href="https://kprofiles.com/bibi-profile/" coords="0,0,100,100" shape="circle">
+				</map>
 					</div>
-				</div>
+			</div>
 		</div>
 		<!-- Interest in Movies Section -->
 		<div class="interests-section-movies">
@@ -422,27 +445,39 @@
 			</ul>
 			<div class="movie-grid">
 			<div class="movie-card">
-					<img src="mov1.jpg" alt="Tteokbokki">
+					<img src="mov1.jpg" alt="Ratatouille" usemap="#rat-about">
 					<h3>Ratatouille</h3>
 					<p>Animated comedy drama film</p>
+					<map name="rat-about">
+					<area target="_blank" title="Ratatouille About" href="https://www.imdb.com/title/tt0382932/" coords="0,0,100,100" shape="rect">
+					</map>
 				</div>
 				
 			<div class="movie-card">
-					<img src="mov2.jpg" alt="Tteokbokki">
+					<img src="mov2.jpg" alt="Mean Girls" usemap="#mean-about">
 					<h3>Mean Girls</h3>
 					<p>Comedy teen film</p>
+					<map name="mean-about-about">
+					<area target="_blank" title="Mean Girls About" href="https://www.imdb.com/title/tt0377092/" coords="0,0,100,100" shape="rect">
+					</map>
 				</div>
 				
 			<div class="movie-card">
-					<img src="mov3.jpg" alt="Tteokbokki">
+					<img src="mov3.jpg" alt="Spirited Away" usemap="#spirit-about">
 					<h3>Spirited Away</h3>
 					<p>Japanese animated fantasy film</p>
+					<map name="spirit-about">
+					<area target="_blank" title="Spirited Away About" href="https://www.imdb.com/title/tt0245429/" coords="0,0,100,100" shape="rect">
+					</map>
 				</div>
 				
 			<div class="movie-card">
-					<img src="mov4.jpg" alt="Tteokbokki">
-					<h3>Alice in The Wonderland</h3>
+					<img src="mov4.jpg" alt="Alice in The Wonderland" usemap="#alice-about">
+					<h3>Alice in The Wonderland</h3> 
 					<p>Fantasy adventure fiction film</p>
+					<map name="alice-about">
+					<area target="_blank" title="Alice in The Wonderland About" href="https://www.imdb.com/title/tt1014759/" coords="0,0,100,100" shape="rect">
+					</map>
 				</div>				
 				
 			</div>
