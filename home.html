@@ -34,6 +34,7 @@
         .intro .image {
             flex: 1 1 100%;
             max-width: 300px;
+			margin-left: 20px;
         }
 		.intro .highlight {
 			color: #D87CAC;
@@ -46,24 +47,33 @@
 			border-radius: 10px;
         }
 
+        @media (min-width: 768px) {
+            .intro {
+                flex-wrap: nowrap;
+                text-align: left;
+            }
+
+            .intro .text,
+            .intro .image {
+                flex: 1 1 50%;
+            }
+        }
     </style>
-</head>
+	</head>
 <body>
 <!-- Introduction Section -->
     <section class="intro">
 		<div class="text">
                
-                    <h2>Greetings everyone! I'm <span class="highlight">Fatini Ja'afar</span></h2>
-                    <p>I'm an ambitious <strong>student</strong> who loves <i>crocheting, cats, and photography</i>. I am currently in my final year of my diploma. With 2.5 years, I studied my diploma at UiTM Kedah. </p>
+                    <h1>Greetings everyone! I'm <span class="highlight">Fatini Ja'afar</span></h1>
+                    <p>I'm an ambitious <strong>student</strong> who loves <i>crocheting, cats, and photography</i>. I am currently in my final year of my diploma at UiTM Kedah.</p>
                     <p>Feel free to explore my biodata, read my experience, or connect with me to get to know me more!</p>
                    
-		</div>
-	
+					</div>
+		
                 <div class="image">
                     <img src="main.jpg" alt="Fatini Ja'afar">
                 </div>
-          
-        
     </section>
-</body>
-</html>
+	</body>
+	</html>
