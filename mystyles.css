@@ -15,16 +15,47 @@ body {
         padding: 20px;
         }
 
- @media (min-width: 768px) {
-            .intro {
-                flex-wrap: nowrap;
-                text-align: left;
-            }
+ @media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
 
-            .intro .text,
-            .intro .image {
-                flex: 1 1 50%;
-            }
+    nav {
+        justify-content: center;
+    }
+
+    footer .footer-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer .social-media a {
+        font-size: 20px; 
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
