@@ -6,23 +6,6 @@
 <link rel="stylesheet" href="mystyles.css">
 <title>Family Blog</title>
 <style>
-    /* General Styles */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #fff;
-        background-color: #091E05;
-        line-height: 1.6;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Story Section */
     .story {
         background: #A3BBAD;
         padding: 20px;
@@ -42,7 +25,6 @@
         color: #fff;
     }
 
-	/* Card Display Styles */
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -62,6 +44,7 @@
 		width: 100%;
 		height: auto;
 		border-bottom: 3px solid #004F2D;
+		cursor: pointer;
 	}
 
 	.card p {
@@ -97,11 +80,11 @@
         <!-- Gallery Section  -->
 		<section class="gallery">
 			<div class="card">
-				<img src="family1.jpg" alt="Family Picture">
+				<a href="family1.jpg" target="_blank"><img src="family1.jpg" alt="Family Picture"></a>
 				<p>Family</p>
 			</div>
 			<div class="card">
-				<img src="family2.jpg" alt="Big Family Picture">
+				<a href="family2.jpg" target="_blank"><img src="family2.jpg" alt="Big Family Picture"></a>
 				<p>Aidilfitri Eid</p>
 			</div>
 		</section>
